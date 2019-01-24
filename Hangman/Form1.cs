@@ -15,6 +15,7 @@ namespace Hangman
         public Form1()
         {
             InitializeComponent();
+            draw_word();
         }
 
         private void label1_Click(object sender, EventArgs e)
