@@ -56,7 +56,7 @@
             this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 54);
+            this.label1.Size = new System.Drawing.Size(47, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "_";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -68,6 +68,7 @@
             this.textBox1.Size = new System.Drawing.Size(412, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -86,7 +87,7 @@
             this.label2.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 54);
+            this.label2.Size = new System.Drawing.Size(47, 53);
             this.label2.TabIndex = 4;
             this.label2.Text = "_";
             // 
@@ -96,7 +97,7 @@
             this.label3.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(134, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 54);
+            this.label3.Size = new System.Drawing.Size(47, 53);
             this.label3.TabIndex = 5;
             this.label3.Text = "_";
             // 
@@ -106,7 +107,7 @@
             this.label4.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(195, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 54);
+            this.label4.Size = new System.Drawing.Size(47, 53);
             this.label4.TabIndex = 6;
             this.label4.Text = "_";
             // 
@@ -116,7 +117,7 @@
             this.label5.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(256, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 54);
+            this.label5.Size = new System.Drawing.Size(47, 53);
             this.label5.TabIndex = 7;
             this.label5.Text = "_";
             // 
@@ -126,7 +127,7 @@
             this.label6.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(317, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 54);
+            this.label6.Size = new System.Drawing.Size(47, 53);
             this.label6.TabIndex = 8;
             this.label6.Text = "_";
             // 
@@ -136,7 +137,7 @@
             this.label7.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(378, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 54);
+            this.label7.Size = new System.Drawing.Size(47, 53);
             this.label7.TabIndex = 9;
             this.label7.Text = "_";
             // 
