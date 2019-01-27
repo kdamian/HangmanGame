@@ -28,35 +28,57 @@ namespace Hangman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string letter = textBox1.Text;
-            bool hit = false;
-            int where_hit = 0;
-
-            for (int i = 0; i < word.Length; i++)
+            if (false_hits < 5)
             {
-                if (Convert.ToString(word[i]) == letter)
+
+
+
+                string letter = textBox1.Text;
+                bool hit = false;
+                int where_hit = 0;
+
+                for (int i = 0; i < word.Length; i++)
                 {
-                    hit = true;
-                    where_hit = i;
+                    if (Convert.ToString(word[i]) == letter)
+                    {
+                        hit = true;
+                        where_hit = i;
+                    }
+
+                    if (where_hit == 1) { label2.Text = letter; }
+                    if (where_hit == 2) { label3.Text = letter; }
+                    if (where_hit == 3) { label4.Text = letter; }
+                    if (where_hit == 4) { label5.Text = letter; }
+                    if (where_hit == 5) { label6.Text = letter; }
                 }
 
-                if (where_hit == 1) { label2.Text = letter; }
-                if (where_hit == 2) { label3.Text = letter; }
-                if (where_hit == 3) { label4.Text = letter; }
-                if (where_hit == 4) { label5.Text = letter; }
-                if (where_hit == 5) { label6.Text = letter; }
+                if (hit == false)
+                {
+                    false_hits += 1;
+                    if (false_hits == 1) { pictureBox1.Image = Hangman.Properties.Resources._1; }
+                    if (false_hits == 2) { pictureBox1.Image = Hangman.Properties.Resources._2; }
+                    if (false_hits == 3) { pictureBox1.Image = Hangman.Properties.Resources._3; }
+                    if (false_hits == 4) { pictureBox1.Image = Hangman.Properties.Resources._4; }
+                    if (false_hits == 5)
+                    {
+                        pictureBox1.Image = Hangman.Properties.Resources._5;
+                        button2.Visible = true;
+                    }
+                }
+
+                win();
+            }
+            else
+            {
+                pictureBox1.Image = Hangman.Properties.Resources.loser;
             }
 
-            if (hit == false)
-            {
-                false_hits += 1;
-            }
         }
 
         private void draw_word()
         {
             
-            string[] words = { "krokusy", "liliput", "krakers" };
+            string[] words = { "krokusy", "liliput" };
             int howManyWords = words.Length;
 
             Random gen = new Random();
@@ -67,5 +89,39 @@ namespace Hangman
             label7.Text = Convert.ToString(word[6]);
         }
 
+        private void win()
+        {
+            if (label2.Text != "_")
+            {
+                if (label3.Text != "_")
+                {
+                    if (label4.Text != "_")
+                    {
+                        if (label5.Text != "_")
+                        {
+                            if (label6.Text != "_")
+                            {
+                                pictureBox1.Image = Hangman.Properties.Resources.winnner;
+                                button2.Visible = true;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            draw_word();
+            label2.Text = "_";
+            label3.Text = "_";
+            label4.Text = "_";
+            label5.Text = "_";
+            label6.Text = "_";
+            false_hits = 0;
+            button2.Visible = false;
+            pictureBox1.Image = null;
+        }
     }
 }
